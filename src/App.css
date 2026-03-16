@@ -1,0 +1,164 @@
+/* Import d'une police moderne et pro */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+  --primary: #0f172a;    /* Bleu sombre très pro */
+  --accent: #2563eb;     /* Bleu électrique pour l'action */
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-body: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-body);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px; /* Idéal pour une lecture centrée sur grand écran aussi */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- HEADER --- */
+header {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+/* Le petit logo Technovate */
+header .image {
+  max-width: 80px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* --- IMAGE CATALOGUE (Juste après le header) --- */
+.image-container {
+  width: 100%;
+  margin: 20px 0 30px 0;
+}
+
+.image-container .image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15); /* Effet premium */
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* --- CONTENU TEXTE --- */
+p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+/* Liste des services en cartes */
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+li {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 600;
+  border-left: 6px solid var(--accent);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  font-size: 0.9rem;
+}
+
+/* Styles spécifiques IDs */
+#p1 {
+  text-align: center;
+  background: #eff6ff;
+  color: var(--accent);
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+#p2 {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+/* Section Contact (Le bouton d'action) */
+#p3, #p4 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#p3 {
+  background: var(--primary);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+#p3 a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+#p4 {
+  font-weight: 700;
+  color: var(--primary);
+  background: white;
+  padding: 10px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Responsive pour tablettes/Mac */
+@media (min-width: 768px) {
+  header h1 { font-size: 2.2rem; }
+  ul { display: grid; grid-template-columns: 1fr 1fr; }
+}
